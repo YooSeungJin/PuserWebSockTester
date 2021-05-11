@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "browserify src/app.js -o disc/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bundle": "browserify src/app.js -o dest/bundle.js"
   },
   "author": "",
   "license": "ISC",
