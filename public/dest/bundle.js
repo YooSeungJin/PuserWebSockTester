@@ -6107,19 +6107,16 @@ let Echo = require('laravel-echo')
 
 window.pusher = require('pusher-js');
 
-window.Echo = new Echo({
+window.Echo = (host, port, key, channel)=>{
+    return new Echo({
     broadcaster: 'pusher',
-    key : 'test',
-    wsHost : 'localhost',
-    wsPort : 6001,
+    key : key,
+    wsHost : host,
+    wsPort : port,
     forceTLS: false,
     disableStats: true,
-})
+}).channel(channel)};
 
-window.Echo.channel('test')
-.listen('TestEvent', e=>{
-    console.log(e);
-})
 
 
 },{"laravel-echo":1,"pusher-js":2}]},{},[3]);

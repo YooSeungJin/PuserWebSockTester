@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="../dest/bundle.js"></script>
+    <script src="dest/bundle.js"></script>
     <script>
 
     </script>
@@ -11,5 +11,11 @@
 <body>
 pusher tester
 <input id="value">
+<script>
+    window.Echo('localhost', 6001, 'TestKey', 'PC1')
+        .listen('RfidRead', e=>{
+            console.log(e);
+        })
+</script>
 </body>
 </html>
